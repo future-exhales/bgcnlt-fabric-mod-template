@@ -20,6 +20,8 @@ import net.minecraft.world.item.equipment.ArmorType;
 
 import java.util.function.Function;
 
+import static org.bgcnltmc.ExampleToolMaterial.EXAMPLE_TOOL_MATERIAL;
+
 public class ModItems {
 
 	// REGULAR ITEM
@@ -41,30 +43,53 @@ public class ModItems {
 	// ARMOR
 
 	public static final Item EXAMPLE_HELMET = register(
-			"guidite_helmet",
+			"example_helmet",
 			Item::new,
 			new Item.Properties().humanoidArmor(ExampleArmorMaterial.INSTANCE, ArmorType.HELMET)
 					.durability(ArmorType.HELMET.getDurability(ExampleArmorMaterial.BASE_DURABILITY))
 	);
-	public static final Item EXAMPLE_CHESTPLATE = register("guidite_chestplate",
+	public static final Item EXAMPLE_CHESTPLATE = register("example_chestplate",
 			Item::new,
 			new Item.Properties().humanoidArmor(ExampleArmorMaterial.INSTANCE, ArmorType.CHESTPLATE)
 					.durability(ArmorType.CHESTPLATE.getDurability(ExampleArmorMaterial.BASE_DURABILITY))
 	);
 
 	public static final Item EXAMPLE_LEGGINGS = register(
-			"guidite_leggings",
+			"example_leggings",
 			Item::new,
 			new Item.Properties().humanoidArmor(ExampleArmorMaterial.INSTANCE, ArmorType.LEGGINGS)
 					.durability(ArmorType.LEGGINGS.getDurability(ExampleArmorMaterial.BASE_DURABILITY))
 	);
 
 	public static final Item EXAMPLE_BOOTS = register(
-			"guidite_boots",
+			"example_boots",
 			Item::new,
 			new Item.Properties().humanoidArmor(ExampleArmorMaterial.INSTANCE, ArmorType.BOOTS)
 					.durability(ArmorType.BOOTS.getDurability(ExampleArmorMaterial.BASE_DURABILITY))
 	);
+
+    // TOOLS
+
+    public static final Item EXAMPLE_SWORD = register(
+            "example_sword",
+            Item::new,
+            new Item.Properties().sword(EXAMPLE_TOOL_MATERIAL, 1f, 1f)
+    );
+    public static final Item EXAMPLE_PICKAXE = register(
+            "example_pickaxe",
+            Item::new,
+            new Item.Properties().pickaxe(EXAMPLE_TOOL_MATERIAL, 1f, 1f)
+    );
+    public static final Item EXAMPLE_SHOVEL = register(
+            "example_shovel",
+            Item::new,
+            new Item.Properties().shovel(EXAMPLE_TOOL_MATERIAL, 1f, 1f)
+    );
+    public static final Item EXAMPLE_HOE = register(
+            "example_hoe",
+            Item::new,
+            new Item.Properties().hoe(EXAMPLE_TOOL_MATERIAL, 1f, 1f)
+    );
 
 	public static <T extends Item> T register(String name, Function<Item.Properties, T> itemFactory, Item.Properties settings) {
 		// Create the item key.
@@ -82,11 +107,24 @@ public class ModItems {
 	public static void initialize() {
 		// Get the event for modifying entries in the ingredients group.
 		// And register an event handler that adds our suspicious item to the ingredients group.
-		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
-				.register((itemGroup) -> itemGroup.accept(ModItems.EXAMPLE_ITEM));
-		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
-				.register((itemGroup) -> itemGroup.accept(ModItems.EXAMPLE_FOOD));
-	}
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS)
+                .register((itemGroup) -> itemGroup.accept(ModItems.EXAMPLE_ITEM));
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FOOD_AND_DRINKS)
+                .register((itemGroup) -> itemGroup.accept(ModItems.EXAMPLE_FOOD));
+
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT)
+                .register((itemGroup) -> itemGroup.accept(ModItems.EXAMPLE_BOOTS));
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT)
+                .register((itemGroup) -> itemGroup.accept(ModItems.EXAMPLE_LEGGINGS));
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT)
+                .register((itemGroup) -> itemGroup.accept(ModItems.EXAMPLE_CHESTPLATE));
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT)
+                .register((itemGroup) -> itemGroup.accept(ModItems.EXAMPLE_HELMET));
+
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT)
+                .register((itemGroup) -> itemGroup.accept(ModItems.EXAMPLE_SWORD));
+
+    }
 }
 
 /*
