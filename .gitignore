@@ -30,7 +30,17 @@ bin/
 
 # fabric
 
-run/
+run/.fabric
+run/config
+run/data
+run/downloads
+run/logs
+run/resourcepacks
+run/resources
+run/saves
+run/command_history.txt
+run/options.txt
+run/usercache.json
 
 # java
 
