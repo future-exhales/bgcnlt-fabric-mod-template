@@ -2,6 +2,9 @@ package org.bgcnltmc;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,7 +16,7 @@ public class MCFabricMod implements ModInitializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	@Override
+    @Override
 	public void onInitialize() {
         ModItems.initialize();
         ModBlocks.initialize();
