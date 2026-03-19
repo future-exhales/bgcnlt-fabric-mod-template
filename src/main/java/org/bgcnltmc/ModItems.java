@@ -80,6 +80,11 @@ public class ModItems {
             Item::new,
             new Item.Properties().pickaxe(EXAMPLE_TOOL_MATERIAL, 1f, 1f)
     );
+    public static final Item EXAMPLE_AXE = register(
+            "example_axe",
+            Item::new,
+            new Item.Properties().axe(EXAMPLE_TOOL_MATERIAL, 1f, 1f)
+    );
     public static final Item EXAMPLE_SHOVEL = register(
             "example_shovel",
             Item::new,
@@ -123,6 +128,14 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT)
                 .register((itemGroup) -> itemGroup.accept(ModItems.EXAMPLE_SWORD));
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
+                .register((itemGroup) -> itemGroup.accept(ModItems.EXAMPLE_PICKAXE));
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
+                .register((itemGroup) -> itemGroup.accept(ModItems.EXAMPLE_HOE));
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
+                .register((itemGroup) -> itemGroup.accept(ModItems.EXAMPLE_SHOVEL));
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
+                .register((itemGroup) -> itemGroup.accept(ModItems.EXAMPLE_AXE));
 
     }
 }
