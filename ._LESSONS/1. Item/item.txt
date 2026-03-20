@@ -1,0 +1,5 @@
+Find ModItems.java and add this code to it:
+
+	// REGULAR ITEM
+	public static final Item EXAMPLE_ITEM = register("example_item", Item::new, new Item.Properties());
+

@@ -2,21 +2,21 @@
 	"schemaVersion": 1,
 	"id": "bgcnltmod",
 	"version": "${version}",
-	"name": "MCFabricMod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "BGCNLTMod",
+	"description": "This is a mod for BGCNLT Learning",
 	"authors": [
-		"Me!"
+		"Warren"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/mcfabricmod/icon.png",
+	"icon": "assets/bgcnltmod/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"org.bgcnltmc.MCFabricMod"
+          "org.bgcnltmc.BGCNLTMod"
 		],
 		"client": [
 			"org.bgcnltmc.MCFabricModClient"

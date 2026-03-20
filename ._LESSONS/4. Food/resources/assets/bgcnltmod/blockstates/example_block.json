@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "bgcnltmod:block/example_block"
+    }
+  }
+}

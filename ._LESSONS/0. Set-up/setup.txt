@@ -2,7 +2,7 @@ Edit src/main/resources/fabric.mod.json to set mod name, version, description in
 
 	"id": "bgcnltmod",                  the namespace your mod uses in-game
 	"version": "${version}",            the version of your mod
-	"name": "MCFabricMod",              the mod name the user sees
+	"name": "BGCNLTMod",                the mod name the user sees
 	"description": "",                  description of what your mod does
 	"authors": [
 		"Me!",                          who made the mod
@@ -13,4 +13,4 @@ Mixins edit pre-existing game behavior
 
 All code lives in src/main
 
-All assets live in src/resources
+All assets live in src/resources. Assets are sounds, textures, models, etc.

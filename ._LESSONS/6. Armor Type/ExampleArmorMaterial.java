@@ -16,10 +16,10 @@ import java.util.Map;
 public class ExampleArmorMaterial {
     public static final int BASE_DURABILITY = 15;
     public static final String ARMOR_NAME = "example";
-    public static final TagKey<Item> REPAIRS_EXAMPLE_ARMOR = TagKey.create(BuiltInRegistries.ITEM.key(), Identifier.fromNamespaceAndPath(MCFabricMod.MOD_ID, "repairs_example_armor"));
+    public static final TagKey<Item> REPAIRS_EXAMPLE_ARMOR = TagKey.create(BuiltInRegistries.ITEM.key(), Identifier.fromNamespaceAndPath(BGCNLTMod.MOD_ID, "repairs_example_armor"));
 
     public static final ResourceKey<EquipmentAsset> EXAMPLE_ARMOR_MATERIAL_KEY = ResourceKey.create(
-            EquipmentAssets.ROOT_ID, Identifier.fromNamespaceAndPath(MCFabricMod.MOD_ID, ARMOR_NAME));
+            EquipmentAssets.ROOT_ID, Identifier.fromNamespaceAndPath(BGCNLTMod.MOD_ID, ARMOR_NAME));
 
     public static final ArmorMaterial INSTANCE = new ArmorMaterial(
             BASE_DURABILITY,

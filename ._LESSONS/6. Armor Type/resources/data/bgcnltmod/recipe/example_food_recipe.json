@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "#A#",
+        " # "
+    ],
+    "key": {
+        "#": "bgcnltmod:example_item",
+        "A": "minecraft:apple"
+    },
+    "result": {
+        "id": "bgcnltmod:example_food",
+        "count": 1
+    }
+}

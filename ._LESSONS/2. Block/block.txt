@@ -1,0 +1,19 @@
+
+This code registers a new block for the game to use:
+
+public static final Block EXAMPLE_BLOCK = register(
+            "example_block",
+            Block::new,
+            BlockBehaviour.Properties.of().sound(SoundType.STONE),
+            true
+    );
+
+
+
+
+public static void initialize() {
+
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register((itemGroup) -> {
+            itemGroup.accept(ModBlocks.EXAMPLE_BLOCK.asItem());
+        });
+    }

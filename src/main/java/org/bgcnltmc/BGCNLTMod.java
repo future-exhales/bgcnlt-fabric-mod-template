@@ -2,13 +2,10 @@ package org.bgcnltmc;
 
 import net.fabricmc.api.ModInitializer;
 
-import net.minecraft.resources.Identifier;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class MCFabricMod implements ModInitializer {
+public class BGCNLTMod implements ModInitializer {
 	public static final String MOD_ID = "bgcnltmod";
 
 	// This logger is used to write text to the console and the log file.

@@ -17,12 +17,8 @@ import java.util.function.Function;
 
 public class ModBlocks {
 
-    public static final Block EXAMPLE_BLOCK = register(
-            "example_block",
-            Block::new,
-            BlockBehaviour.Properties.of().sound(SoundType.STONE),
-            true
-    );
+    public static void initialize() {
+    }
 
 
 
@@ -47,16 +43,10 @@ public class ModBlocks {
     }
 
     private static ResourceKey<Block> keyOfBlock(String name) {
-        return ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(MCFabricMod.MOD_ID, name));
+        return ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(BGCNLTMod.MOD_ID, name));
     }
 
     private static ResourceKey<Item> keyOfItem(String name) {
-        return ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MCFabricMod.MOD_ID, name));
-    }
-
-    public static void initialize() {
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register((itemGroup) -> {
-            itemGroup.accept(ModBlocks.EXAMPLE_BLOCK.asItem());
-        });
+        return ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(BGCNLTMod.MOD_ID, name));
     }
 }

@@ -1,0 +1,28 @@
+
+
+
+	public static final Item EXAMPLE_HELMET = register(
+			"example_helmet",
+			Item::new,
+			new Item.Properties().humanoidArmor(ExampleArmorMaterial.INSTANCE, ArmorType.HELMET)
+					.durability(ArmorType.HELMET.getDurability(ExampleArmorMaterial.BASE_DURABILITY))
+	);
+	public static final Item EXAMPLE_CHESTPLATE = register("example_chestplate",
+			Item::new,
+			new Item.Properties().humanoidArmor(ExampleArmorMaterial.INSTANCE, ArmorType.CHESTPLATE)
+					.durability(ArmorType.CHESTPLATE.getDurability(ExampleArmorMaterial.BASE_DURABILITY))
+	);
+
+	public static final Item EXAMPLE_LEGGINGS = register(
+			"example_leggings",
+			Item::new,
+			new Item.Properties().humanoidArmor(ExampleArmorMaterial.INSTANCE, ArmorType.LEGGINGS)
+					.durability(ArmorType.LEGGINGS.getDurability(ExampleArmorMaterial.BASE_DURABILITY))
+	);
+
+	public static final Item EXAMPLE_BOOTS = register(
+			"example_boots",
+			Item::new,
+			new Item.Properties().humanoidArmor(ExampleArmorMaterial.INSTANCE, ArmorType.BOOTS)
+					.durability(ArmorType.BOOTS.getDurability(ExampleArmorMaterial.BASE_DURABILITY))
+	);
