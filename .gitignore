@@ -42,6 +42,11 @@ run/command_history.txt
 run/options.txt
 run/usercache.json
 
+# resources
+
+src/main/generated
+src/main/resources/assets
+
 # java
 
 hs_err_*.log

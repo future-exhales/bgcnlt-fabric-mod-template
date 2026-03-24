@@ -1,5 +1,6 @@
-Find ModItems.java and add this code to it:
+In src/main/.../ModItems.java add this code to it:
 
-	// REGULAR ITEM
 	public static final Item EXAMPLE_ITEM = register("example_item", Item::new, new Item.Properties());
+
+This registers an example Item that does nothing, primarily for crafting purposes, an intermediary item
 

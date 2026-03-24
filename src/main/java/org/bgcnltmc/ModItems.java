@@ -16,12 +16,15 @@ import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 import net.minecraft.world.item.equipment.ArmorType;
 
+import java.util.ArrayList;
 import java.util.function.Function;
 
 public class ModItems {
+    public static ArrayList<Item> items = new ArrayList<Item>();
+    public static ArrayList<String> itemNames = new ArrayList<String>();
 
-	// REGULAR ITEM
 	public static final Item EXAMPLE_ITEM = register("example_item", Item::new, new Item.Properties());
+
 	// FOOD
 	public static final Consumable LEVITATION_FOOD_CONSUMABLE_COMPONENT = Consumables.defaultFood()
 			// The duration is in ticks, 20 ticks = 1 second
@@ -51,6 +54,8 @@ public class ModItems {
 	}
 
 	public static void initialize() {
+        items.add(EXAMPLE_ITEM);
+        itemNames.add("Example Item");
 		// Get the event for modifying entries in the ingredients group.
 		// And register an event handler that adds our suspicious item to the ingredients group.
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS)

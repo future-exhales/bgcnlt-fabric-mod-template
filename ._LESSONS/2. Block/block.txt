@@ -1,5 +1,8 @@
 
-This code registers a new block for the game to use:
+This code registers a new block for the game to use, it goes in src/main/java/.../ModBlocks
+
+
+
 
 public static final Block EXAMPLE_BLOCK = register(
             "example_block",
@@ -12,8 +15,9 @@ public static final Block EXAMPLE_BLOCK = register(
 
 
 public static void initialize() {
-
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register((itemGroup) -> {
             itemGroup.accept(ModBlocks.EXAMPLE_BLOCK.asItem());
         });
+        blocks.add(EXAMPLE_BLOCK);
+        blockNames.add("Example Block");
     }
