@@ -14,3 +14,6 @@ Mixins edit pre-existing game behavior
 All code lives in src/main
 
 All assets live in src/resources. Assets are sounds, textures, models, etc.
+
+Datagen (short for Data Generation) produces appropriate .json files to connect assets to the game.
+

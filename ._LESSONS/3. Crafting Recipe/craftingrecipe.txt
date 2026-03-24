@@ -1,0 +1,31 @@
+There are multiple ways to do this, with or without datagen. The easiest is without datagen
+Use this website: https://crafting.thedestruc7i0n.ca/
+
+The website does not have your modded items, so use placeholders to shape your recipe.
+For example, we can use minecraft:ghast_tear as a placeholder for example_item.
+
+A Shapeless recipe can be crafted with any order of items.
+The 2x2 crafting recipe will allow the recipe to be crafted without a crafting table.
+
+Pregenerated json files for each kind of recipe are preplaced in the lesson/resources/data/bgcnltmod/recipe/ folder
+
+This section dictates the pattern of the (shaped) crafting recipe
+  "pattern": [
+    " # ",
+    "#A#",
+    " # "
+  ],
+
+This section lets the game know which character represents which item
+  "key": {
+    "#": "bgcnltmod:example_food",
+    "A": "minecraft:apple"
+  },
+
+This section produces the result of what the crafting recipe produces
+
+  "result": {
+    "id": "bgcnltmod:example_food",     //  Kind of item the recipe produces
+    "count": 3                          //  Amount of said item
+  }
+

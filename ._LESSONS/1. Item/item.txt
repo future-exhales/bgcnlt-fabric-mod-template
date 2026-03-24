@@ -3,4 +3,23 @@ In src/main/.../ModItems.java add this code to it:
 	public static final Item EXAMPLE_ITEM = register("example_item", Item::new, new Item.Properties());
 
 This registers an example Item that does nothing, primarily for crafting purposes, an intermediary item
+Replace EXAMPLE_ITEM and example_item to the name of the item you wish to add
 
+Also, add these lines into the initialize() method:
+
+	public static void initialize() {
+        items.add(EXAMPLE_ITEM);
+        itemNames.add("Example Item");
+
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS)
+                .register((itemGroup) -> itemGroup.accept(ModItems.EXAMPLE_ITEM));
+
+
+Change "Example Item" to what you want the Item to be called (In English)
+
+You can also remove .INGREDIENTS and select which Creative Mode Tab you wish to add it to.
+A custom creative mode inventory tab can be added in the appropriate lesson.
+
+Copy and paste the contents of the lesson resources folder into src/main/resources
+Use the image editor of your choice to change what your item looks like by editing example_item.png. Piskelapp.com is good.
+Rename example_item.png to the name of your item

@@ -2,8 +2,6 @@
 This code registers a new block for the game to use, it goes in src/main/java/.../ModBlocks
 
 
-
-
 public static final Block EXAMPLE_BLOCK = register(
             "example_block",
             Block::new,
@@ -18,6 +16,8 @@ public static void initialize() {
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register((itemGroup) -> {
             itemGroup.accept(ModBlocks.EXAMPLE_BLOCK.asItem());
         });
-        blocks.add(EXAMPLE_BLOCK);
-        blockNames.add("Example Block");
+        blocks.add(EXAMPLE_BLOCK);          //this adds your block into the datagen system
+        blockNames.add("Example Block");    //this adds your block's name into the datagen system
     }
+
+Copy the contents of the lesson resources folder into src/main/resources

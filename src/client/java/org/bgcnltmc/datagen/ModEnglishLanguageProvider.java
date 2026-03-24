@@ -3,6 +3,7 @@ package org.bgcnltmc.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.core.HolderLookup;
+import org.bgcnltmc.BGCNLTMod;
 import org.bgcnltmc.ModBlocks;
 import org.bgcnltmc.ModItems;
 

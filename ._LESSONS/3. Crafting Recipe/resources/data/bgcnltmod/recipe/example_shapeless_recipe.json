@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "bgcnltmod:example_food",
+    "minecraft:white_dye"
+  ],
+  "result": {
+    "id": "bgcnltmod:example_food",
+    "count": 16
+  }
+}
