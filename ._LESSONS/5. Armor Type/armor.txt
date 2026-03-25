@@ -14,3 +14,18 @@ The item textures are in assets/.../textures/item
 The way the armor looks on the player is in assets/.../textures/entity/equipment/humanoid and humanoid_leggings
 
 Go into your ModArmor class and edit the variable names and datagen names
+
+add this section of code to ModEnglishLanguageProvider
+
+        for (int i = 0; i < ModArmor.armorItems.size(); i++) {
+            translationBuilder.add(ModArmor.armorItems.get(i).getDescriptionId(), ModArmor.armorItemNames.get(i));
+        }
+
+add this section of code to ModModelProvider
+
+        for (int i = 0; i < ModArmor.armorItems.size(); i++) {
+            itemModelGenerator.generateFlatItem(ModArmor.armorItems.get(i), ModelTemplates.FLAT_ITEM);
+        }
+add this to onInitialize() in main class
+
+        ModArmor.initialize();

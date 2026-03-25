@@ -16,6 +16,7 @@ public class ModEnglishLanguageProvider extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(HolderLookup.Provider provider, TranslationBuilder translationBuilder) {
+
         for (int i = 0; i < ModItems.itemNames.size(); i++ ) {
             translationBuilder.add(ModItems.items.get(i).getDescriptionId(), ModItems.itemNames.get(i));
         }
