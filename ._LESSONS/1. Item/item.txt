@@ -8,8 +8,8 @@ Replace EXAMPLE_ITEM and example_item to the name of the item you wish to add
 Also, add these lines into the initialize() method:
 
 	public static void initialize() {
-        items.add(EXAMPLE_ITEM);
-        itemNames.add("Example Item");
+        items.add(EXAMPLE_ITEM);                // this adds your item into the datagen system
+        itemNames.add("Example Item");          // this adds your item's name to the datagen system
 
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS)
                 .register((itemGroup) -> itemGroup.accept(ModItems.EXAMPLE_ITEM));

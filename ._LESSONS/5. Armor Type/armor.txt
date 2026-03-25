@@ -1,25 +1,16 @@
-public static final Item EXAMPLE_SWORD = register(
-            "example_sword",
-            Item::new,
-            new Item.Properties().sword(EXAMPLE_TOOL_MATERIAL, 1f, 1f)
-    );
-    public static final Item EXAMPLE_PICKAXE = register(
-            "example_pickaxe",
-            Item::new,
-            new Item.Properties().pickaxe(EXAMPLE_TOOL_MATERIAL, 1f, 1f)
-    );
-    public static final Item EXAMPLE_AXE = register(
-            "example_axe",
-            Item::new,
-            new Item.Properties().axe(EXAMPLE_TOOL_MATERIAL, 1f, 1f)
-    );
-    public static final Item EXAMPLE_SHOVEL = register(
-            "example_shovel",
-            Item::new,
-            new Item.Properties().shovel(EXAMPLE_TOOL_MATERIAL, 1f, 1f)
-    );
-    public static final Item EXAMPLE_HOE = register(
-            "example_hoe",
-            Item::new,
-            new Item.Properties().hoe(EXAMPLE_TOOL_MATERIAL, 1f, 1f)
-    );
+Place the ExampleArmorMaterial.java and ModArmor.java file into src/main/java/.../ it should be next to your ModItems file
+You can rename the class ExampleArmorMaterial to the name of the Armor Material you wish to create.
+
+Inside the file you can edit your armor's attributes. Follow the comments.
+
+Add this line to your datagen/ModItemTagProvider to make your modded item capable of repairing your armor in an Anvil
+
+        valueLookupBuilder(ExampleArmorMaterial.REPAIRS_EXAMPLE_ARMOR)
+                .add(ModItems.EXAMPLE_ITEM);
+
+
+There are two main textures for armor, the items themselves, and the appearance on the player's body
+The item textures are in assets/.../textures/item
+The way the armor looks on the player is in assets/.../textures/entity/equipment/humanoid and humanoid_leggings
+
+Go into your ModArmor class and edit the variable names and datagen names

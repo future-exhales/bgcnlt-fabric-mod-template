@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    " S",
+    " S"
+  ],
+  "key": {
+    "#": "bgcnltmod:example_item",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "bgcnltmod:example_hoe",
+    "count": 1
+  }
+}

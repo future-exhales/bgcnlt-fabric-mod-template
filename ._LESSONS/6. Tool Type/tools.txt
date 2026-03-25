@@ -1,28 +1,13 @@
+Copy and paste the ExampleToolMaterial.java file so that it is next to ModItems and ModBlocks
+Rename the ExampleToolMaterial.java file to what you wish the tool material to be called
 
+Copy and paste the ModTools.java file so that it is next to the ModItems class
 
+add this line to onInitialize() in your main class
+        ModTools.initialize();
 
-	public static final Item EXAMPLE_HELMET = register(
-			"example_helmet",
-			Item::new,
-			new Item.Properties().humanoidArmor(ExampleArmorMaterial.INSTANCE, ArmorType.HELMET)
-					.durability(ArmorType.HELMET.getDurability(ExampleArmorMaterial.BASE_DURABILITY))
-	);
-	public static final Item EXAMPLE_CHESTPLATE = register("example_chestplate",
-			Item::new,
-			new Item.Properties().humanoidArmor(ExampleArmorMaterial.INSTANCE, ArmorType.CHESTPLATE)
-					.durability(ArmorType.CHESTPLATE.getDurability(ExampleArmorMaterial.BASE_DURABILITY))
-	);
+Edit the file and follow the comments so that you craft your tool material in the way you wish
 
-	public static final Item EXAMPLE_LEGGINGS = register(
-			"example_leggings",
-			Item::new,
-			new Item.Properties().humanoidArmor(ExampleArmorMaterial.INSTANCE, ArmorType.LEGGINGS)
-					.durability(ArmorType.LEGGINGS.getDurability(ExampleArmorMaterial.BASE_DURABILITY))
-	);
-
-	public static final Item EXAMPLE_BOOTS = register(
-			"example_boots",
-			Item::new,
-			new Item.Properties().humanoidArmor(ExampleArmorMaterial.INSTANCE, ArmorType.BOOTS)
-					.durability(ArmorType.BOOTS.getDurability(ExampleArmorMaterial.BASE_DURABILITY))
-	);
+The 1f, 1f after the TOOL_MATERIAL are what percentages of the base attack damage and durability set by the ExampleToolMaterial class file.
+All tools and weapons in the game keep this at 1f, 1f
+Make sure the EXAMPLE_TOOL_MATERIAL matches the variable name found in the class file declaring it

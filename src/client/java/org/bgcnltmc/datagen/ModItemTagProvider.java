@@ -3,6 +3,8 @@ package org.bgcnltmc.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
+import org.bgcnltmc.ExampleArmorMaterial;
+import org.bgcnltmc.ModItems;
 import org.jspecify.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;

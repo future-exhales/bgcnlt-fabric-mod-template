@@ -10,7 +10,7 @@ public static final Block EXAMPLE_BLOCK = register(
     );
 
 
-
+Place this code in the initialize() method to add your block to a desired creative mode tab
 
 public static void initialize() {
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register((itemGroup) -> {
@@ -21,3 +21,4 @@ public static void initialize() {
     }
 
 Copy the contents of the lesson resources folder into src/main/resources
+Edit the texture of the block in piskelapp

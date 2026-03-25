@@ -20,19 +20,7 @@ public class ModBlocks {
 
     public static ArrayList<Block> blocks = new ArrayList<Block> ();
     public static ArrayList<String> blockNames = new ArrayList<String> ();
-    public static final Block EXAMPLE_BLOCK = register(
-            "example_block",
-            Block::new,
-            BlockBehaviour.Properties.of().sound(SoundType.STONE),
-            true
-    );
-
     public static void initialize() {
-        blocks.add(EXAMPLE_BLOCK);
-        blockNames.add("Example Block");
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register((itemGroup) -> {
-            itemGroup.accept(ModBlocks.EXAMPLE_BLOCK.asItem());
-        });
     }
 
 

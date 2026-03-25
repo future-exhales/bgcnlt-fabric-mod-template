@@ -1,0 +1,38 @@
+This is how to add a normal food with nothing too special.
+
+public static final Item EXAMPLE_FOOD = register("example_food" ,Item:: new, new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .saturationModifier(0.0f)
+                    .nutrition(1)
+                    .alwaysEdible()
+                    .build()));
+
+Saturation is how long the food keeps you nourished for,
+and the nutrition value is how many half hunger bars it fills up when you eat it. 20 would be from nothing to full instantly, not 10.
+Keep the alwaysEdible() attribute if you want the player to be able to eat it even if they're full, like a golden apple.
+
+and then in the initialize method, you can add the food to the food creative mode tab
+
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FOOD_AND_DRINKS)
+                .register((itemGroup) -> itemGroup.accept(ModItems.EXAMPLE_FOOD));
+
+If you want to add a food that causes potion effects, use the code below instead.
+LEVITIATION was added as an example, but can be changed by changing MobEffects.LEVITIATION
+The 6 in 6 * 20 after it is how many seconds it lasts for, the 1 after it is how strong the effect is.
+The 1.0f is the % chance the effect actually happens. 1.0f is 100% and 0.0f is 0%, 0.5f is 50%
+.consumeSeconds() changes how long it takes to eat the food. 1.6f seconds is the default
+
+
+	public static final Consumable LEVITATION_FOOD_CONSUMABLE_COMPONENT = Consumables.defaultFood()
+			// The duration is in ticks, 20 ticks = 1 second
+			.onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.LEVITATION, 6 * 20, 1), 1.0f))
+            .consumeSeconds(1.6f)
+			.build();
+	public static final FoodProperties LEVITATION_FOOD_COMPONENT = new FoodProperties.Builder()
+			.nutrition(3)
+			.saturationModifier(1.3f)
+			.alwaysEdible()
+			.build();
+
+	public static final Item EXAMPLE_POTION_FOOD = register("example_potion_food", Item::new, new Item.Properties()
+			.food(LEVITATION_FOOD_COMPONENT, LEVITATION_FOOD_CONSUMABLE_COMPONENT));
