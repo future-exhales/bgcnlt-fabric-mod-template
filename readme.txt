@@ -1,1 +1,1 @@
-Mostly for teaching 4th-8th grade how to mod minecraft
+Mostly for teaching 4th-8th grade how to mod minecraft java version 1.21.11
